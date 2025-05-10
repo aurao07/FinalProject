@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Resources / Recursos</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+
+  <link rel="stylesheet" href="resource.css">
+
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Resources / <i>Recursos</i></h1>
+
+    <div id="intro">
+      <p>Welcome to the resource page. Here you can find lawyers and see a live feed of recent ICE sightings.</p>
+    </div>
+
+    <div class="lawyers-map-container">
+      <div class="lawyer-info">
+        <div id="lawyers"></div>
+        <p>
+          Here are some of the top-rated lawyers found in NYC. All locations include the office's name, rating, consultation fee, and the neighborhood they are located in.
+          All lawyers were found on <a href="https://www.justia.com/lawyers/immigration-law/new-york">justia.com</a>.
+        </p>
+        <p>
+<button id="toggleTips" type="button">Show Tips</button>
+
+
+<div id="tipsSection" style="display: none;">
+  <b>Here are some other tips for prevention and safety.</b>
+  <h3><i>Make a Plan</i></h3>
+
+  <p>To protect yourself, make sure that you carry the correct documentation:</p>
+
+  <p>If you have a valid work permit or permanent resident card (i.e. “green card”), carry it with you at all times. If you do not have one, carry a municipal ID, state ID, or driver's license only if it was issued in the United States by a U.S. government agency and contains no information about your immigration status or your country of origin. Ask local immigration advocates about what kind of documents are safe for you to carry in your area.</p>
+
+  <p>Do not carry any documentation indicating your country of origin.</p>
+
+  <p>Do not carry any false identity or immigration documents.</p>
+
+  <p>At all times, carry a red card, reminding you of your constitutional rights and to exercise your right to remain silent in case you are stopped or interrogated by ICE or police officers.</p>
+ 
+ <b>Aquí tienes otros consejos de prevención y seguridad.</b>
+
+<h3><i>Elabora un plan</i></h3>
+
+<p>Para protegerte, asegúrate de llevar la documentación correcta:</p>
+
+<p>Si tienes un permiso de trabajo o una tarjeta de residencia permanente (es decir, la "tarjeta verde") válidos, llévalos contigo en todo momento. Si no los tienes, lleva una identificación municipal, una identificación estatal o una licencia de conducir solo si fue emitida en Estados Unidos por una agencia del gobierno estadounidense y no contiene información sobre tu estatus migratorio ni tu país de origen. Pregunte a los defensores de inmigración locales qué tipo de documentos puede llevar consigo en su zona.
+
+<p>No lleve consigo ningún documento que indique su país de origen.
+
+<p>No lleve consigo ninguna identidad falsa ni documentos de inmigración.
+
+<p>Lleve siempre consigo una tarjeta roja que le recuerde sus derechos constitucionales y que debe ejercer su derecho a guardar silencio en caso de ser detenido o interrogado por ICE o agentes de policía.</p>
+</div>
+            </p>
+          </p>
+        </p>
+      </div>
+
+      <div class="map-wrapper">
+        <div id="map"></div>
+      </div>
+    </div>
+    
+    <div id="info"></div>
+
+    <h2>People Over Papers</h2>
+    <p>"People Over Papers collects data on sightings; the locations are not confirmed sightings; however, they are reviewed by moderators. Please take this information with caution and account for human error. Use this information to cross-reference with your state or local rapid response networks. People Over Papers does not condone any violence."</p>
+    <p>View the map <a href="https://padlet.com/PeopleoverPapers/people-over-papers-anonymous-anonimo-lf0l47ljszbto2uj">here.</a></p>
+    <p>
+      People Over Papers recopila datos sobre avistamientos; las ubicaciones no son confirmadas; sin embargo, son revisadas por moderadores. Por favor, tome esta información con precaución y tenga en cuenta los errores humanos. Utilice esta información para compararla con las redes de respuesta rápida de su estado o localidad. People Over Papers no tolera ningún tipo de violencia.</p>
+      <p>Vea el mapa <a href="https://padlet.com/PeopleoverPapers/people-over-papers-anonymous-anonimo-lf0l47ljszbto2uj"> aquí.</a>
+    </p>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="coordinates.js"></script>
+  <script src="map.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("toggleTips");
+    const tipsSection = document.getElementById("tipsSection");
+
+    toggleButton.addEventListener("click", function () {
+      if (tipsSection.style.display === "none" || tipsSection.style.display === "") {
+        tipsSection.style.display = "block";
+        toggleButton.textContent = "Hide Tips";
+      } else {
+        tipsSection.style.display = "none";
+        toggleButton.textContent = "Show Tips";
+      }
+    });
+  });
+</script>
+</body>
+</html>

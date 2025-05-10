@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+
+#intro {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#info {
+  margin-bottom: 20px;
+}
+
+.lawyers-map-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.lawyer-info {
+  flex: 1;
+  max-width: 500px;
+}
+
+.lawyer-info p {
+  text-align: left;
+}
+
+.map-wrapper {
+  flex-shrink: 0;
+}
+
+#map {
+  width: 600px;
+  height: 600px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+a {
+  color: #d32f2f;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#toggleTips {
+  background-color: #d32f2f;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+#toggleTips:hover {
+  background-color: #b71c1c;
+}
